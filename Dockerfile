@@ -20,17 +20,6 @@ LABEL maintainer="Karthik Vadla <karthik.vadla@intel.com>"
 LABEL tensorflow_serving_github_branchtag=${TF_SERVING_VERSION_GIT_BRANCH}
 LABEL tensorflow_serving_github_commit=${TF_SERVING_VERSION_GIT_COMMIT}
 
-RUN echo deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe > /etc/apt/sources.list
-RUN echo deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe >> /etc/apt/sources.list
-RUN echo deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe >> /etc/apt/sources.list
-RUN echo deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe >> /etc/apt/sources.list
-RUN echo deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe >> /etc/apt/sources.list
-RUN echo deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe >> /etc/apt/sources.list
-RUN echo deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe >> /etc/apt/sources.list
-RUN echo deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe >> /etc/apt/sources.list
-RUN echo deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe >> /etc/apt/sources.list
-RUN echo deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe >> /etc/apt/sources.list
-
 RUN apt-get update && apt-get install -y --no-install-recommends \
         automake \
         build-essential \
